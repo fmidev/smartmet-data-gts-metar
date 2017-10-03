@@ -12,12 +12,15 @@ if [ -d /smartmet ]; then
     OUT=/smartmet/data/gts/metar/world/querydata/
     TMP=/smartmet/tmp/data/metar_gts_${TIMESTAMP}
     EDITOR=/smartmet/editor/in/
+    LOGFILE=/smartmet/logs/data/metar-gts.log
 else
     IN=$HOME/data/incoming/metar
     OUT=$HOME/data/gts/metar/world/querydata/
     TMP=/tmp/data_metar_gts_${TIMESTAMP}
     EDITOR=$HOME/editor/in/
+    LOGFILE=$HOME/logs/data/metar-gts.log
 fi
+
 METARFILE=${TMP}/${TIMESTAMP}_gts_world_metar.sqd
 
 # Use log file if not run interactively

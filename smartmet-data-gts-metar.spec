@@ -2,7 +2,7 @@
 
 Name:           smartmet-data-gts-metar
 Version:        17.10.3
-Release:        3%{?dist}.fmi
+Release:        5%{?dist}.fmi
 Summary:        SmartMet Data GTS METAR
 Group:          System Environment/Base
 License:        MIT
@@ -35,7 +35,7 @@ mkdir -p .%{smartmetroot}/logs/data
 mkdir -p .%{smartmetroot}/run/data/metar_gts/bin
 
 cat > %{buildroot}%{smartmetroot}/cnf/cron/cron.d/metar-gts.cron <<EOF
-*/10 * * * * /smartmet/run/data/metar_gts/bin/dometar.sh > /smartmet/logs/data/metar-gts.log 2>&1
+*/10 * * * * /smartmet/run/data/metar_gts/bin/dometar.sh
 EOF
 
 cat > %{buildroot}%{smartmetroot}/cnf/cron/cron.hourly/clean_data_gts_metar <<EOF
